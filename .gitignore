@@ -18,6 +18,13 @@ venv/
 env/
 
 # =========================
+# Local databases (DO NOT COMMIT)
+# =========================
+*.db
+*.sqlite
+*.sqlite3
+
+# =========================
 # Logs & Temp files
 # =========================
 *.log
@@ -37,6 +44,12 @@ Thumbs.db
 .pytest_cache/
 .coverage
 htmlcov/
+
+# =========================
+# Local scripts (one-off tools)
+# =========================
+create_admin.py
+create_tables.py
 
 # =========================
 # Azure / Docker
