@@ -2,6 +2,15 @@ from sqlalchemy import String
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.db.database import Base
+from sqlalchemy.orm import relationship
+
+memberships = relationship(
+    "Membership",
+    back_populates="user",
+    cascade="all, delete-orphan",
+)
+
+audit_logs = relationship("AuditLog")
 
 
 class User(Base):
